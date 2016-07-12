@@ -1,46 +1,47 @@
-import React from 'react'
+import React from 'react';
 
 class SetUsername extends React.Component {
- onSubmit(event) {
-   event.preventDefault();
+  onSubmit(event) {
+    event.preventDefault();
 
-   let newUser = this.refs.newUsername.value;
-   console.log("Registering as: ", newUser);
+    let newUser = this.refs.newUsername.value;
+    console.log("Registering as: ", newUser);
 
-   this.props.onChange(newUser)
- }
+    this.props.onChange(newUser);
+  }
 
-renderUserform(){
-  return(
-    <form onSubmit={ this.onSubmit.bind(this) }>
-      <input ref="newUsername" type="text" placeholder="What is your name?" />
-      <input type="submit" value="Register" />
+  renderUserForm() {
+    return (
+      <form onSubmit={ this.onSubmit.bind(this) }>
+        <input ref="newUsername" type="text" placeholder="What's your name?" />
+        <input type="submit" value="Register" />
       </form>
-  );
-}
+    );
+  }
 
-restUser(event) {
-  event.preventDefault();
-  this.props.onChange("guest");
-}
+  resetUser(event) {
+    event.preventDefault();
+    this.props.onChange("guest");
+  }
 
-renderGreeting (){
-  return (
-    <div>
-      <p>Hi { this.props.username}!
-      <a href="#" onClick={this.resetUser.bind(this) }> not You?</a>
-      </p>
-    </div>
-  )
-}
+  renderGreeting() {
+    return (
+      <div>
+        <p>
+          Hi, { this.props.username }!
+          (<a href="#" onClick={ this.resetUser.bind(this) }>not you?</a>)
+        </p>
+      </div>
+    );
+  }
 
-  render (){
+  render() {
     if (this.props.username == "guest") {
-      return this.renderUserform();
+      return this.renderUserForm();
     } else {
       return this.renderGreeting();
     }
   }
 }
 
-export default SetUsername
+export default SetUsername;

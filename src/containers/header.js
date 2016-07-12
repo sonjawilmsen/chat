@@ -1,10 +1,13 @@
 import React from 'react';
 import AppBar from '../components/app-bar';
+import ColorSet from '../styles/ColorSet';
 
 class Header extends React.Component {
   render () {
     return (
-      <AppBar title={ this.props.name } style={{ background: }}/>
+      <AppBar title={ this.props.name }
+       style={{ backgroundColor: ColorSet.secondary }}
+       headerStyle={{ color: ColorSet.primary }}/>
     );
   }
 }

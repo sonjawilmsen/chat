@@ -1,7 +1,7 @@
 import BaseModel from './BaseModel';
 
 class MessageModel extends BaseModel {
-  defaults () {
+  defaults() {
     return {
       username: null,
       text: null,
@@ -10,9 +10,9 @@ class MessageModel extends BaseModel {
     };
   }
 
-  constructor () {
+  constructor() {
     super('message');
   }
 }
 
-export default MessageModel ;
+export default MessageModel;
