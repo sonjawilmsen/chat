@@ -1,4 +1,7 @@
-# React Starter
+# React based on Api.
+
+The project is a web based chat function. The front end was build with React. It uses an API to communicate with the Back End.
+It was very cool to see more on working with API's!
 
 ## Installation
 
@@ -7,9 +10,3 @@ npm install
 npm start
 open http://localhost:3000
 ```
-
-
-------------------
-
-Simplified version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) for the
-traineeship program.
